@@ -19,7 +19,7 @@ public class TesteCampoTreinamento {
 	public void testeTextField(){
 		WebDriver driver = new EdgeDriver();
 		driver.manage().window().setSize(new Dimension(1200, 765));
-		driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
+		driver.get("file:///" + System.getProperty("user.dir") + "/src/test/resources/componentes.html");
 		driver.findElement(By.id("elementosForm:nome")).sendKeys("Teste de escrita");
 		Assert.assertEquals("Teste de escrita", driver.findElement(By.id("elementosForm:nome")).getAttribute("value"));
 		
@@ -30,7 +30,7 @@ public class TesteCampoTreinamento {
 	public void deveIntegarirComTextArea(){
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().setSize(new Dimension(1200, 765));
-		driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
+		driver.get("file:///" + System.getProperty("user.dir") + "/src/test/resources/componentes.html");
 		driver.findElement(By.id("elementosForm:sugestoes")).sendKeys("teste\n\naasldjdlks\nUltima linha");
 		Assert.assertEquals("teste\n\naasldjdlks\nUltima linha", driver.findElement(By.id("elementosForm:sugestoes")).getAttribute("value"));
 		
@@ -42,7 +42,7 @@ public class TesteCampoTreinamento {
 	public void deveIntegarirComRadioButton(){
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().setSize(new Dimension(1200, 765));
-		driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
+		driver.get("file:///" + System.getProperty("user.dir") + "/src/test/resources/componentes.html");
 		driver.findElement(By.id("elementosForm:sexo:0")).click();
 		Assert.assertTrue(driver.findElement(By.id("elementosForm:sexo:0")).isSelected());
 		driver.quit();
@@ -52,7 +52,7 @@ public class TesteCampoTreinamento {
 	public void deveIntegarirComCheckbox(){
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().setSize(new Dimension(1200, 765));
-		driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
+		driver.get("file:///" + System.getProperty("user.dir") + "/src/test/resources/componentes.html");
 		driver.findElement(By.id("elementosForm:comidaFavorita:2")).click();
 		Assert.assertTrue(driver.findElement(By.id("elementosForm:comidaFavorita:2")).isSelected());
 		driver.quit();
@@ -62,7 +62,7 @@ public class TesteCampoTreinamento {
 	public void deveIntegarirComCombo(){
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().setSize(new Dimension(1200, 765));
-		driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
+		driver.get("file:///" + System.getProperty("user.dir") + "/src/test/resources/componentes.html");
 		WebElement element = driver.findElement(By.id("elementosForm:escolaridade"));
 		Select combo = new Select(element);
 //		combo.selectByIndex(2);
@@ -77,7 +77,7 @@ public class TesteCampoTreinamento {
 	public void deveVerificarValoresCombo(){
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().setSize(new Dimension(1200, 765));
-		driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
+		driver.get("file:///" + System.getProperty("user.dir") + "/src/test/resources/componentes.html");
 		WebElement element = driver.findElement(By.id("elementosForm:escolaridade"));
 		Select combo = new Select(element);
 		List<WebElement> options = combo.getOptions();
@@ -97,7 +97,7 @@ public class TesteCampoTreinamento {
 	public void deveVerificarValoresComboMultiplo(){
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().setSize(new Dimension(1200, 765));
-		driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
+		driver.get("file:///" + System.getProperty("user.dir") + "/src/test/resources/componentes.html");
 		WebElement element = driver.findElement(By.id("elementosForm:esportes"));
 		Select combo = new Select(element);
 		combo.selectByVisibleText("Natacao");
@@ -117,7 +117,7 @@ public class TesteCampoTreinamento {
 	public void deveinteragirComBotoes(){
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().setSize(new Dimension(1200, 765));
-		driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
+		driver.get("file:///" + System.getProperty("user.dir") + "/src/test/resources/componentes.html");
 		WebElement botao = driver.findElement(By.id("buttonSimple"));
 		botao.click();
 		
@@ -130,7 +130,7 @@ public class TesteCampoTreinamento {
 	public void deveinteragirComLinks(){
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().setSize(new Dimension(1200, 765));
-		driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
+		driver.get("file:///" + System.getProperty("user.dir") + "/src/test/resources/componentes.html");
 	
 		driver.findElement(By.linkText("Voltar")).click();
 		
@@ -142,7 +142,7 @@ public class TesteCampoTreinamento {
 	public void deveBuscarTextosNaPagina(){
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().setSize(new Dimension(1200, 765));
-		driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
+		driver.get("file:///" + System.getProperty("user.dir") + "/src/test/resources/componentes.html");
 		
 //		Assert.assertTrue(driver.findElement(By.tagName("body"))
 //				.getText().contains("Campo de Treinamento"));
