@@ -13,7 +13,7 @@ public class TesteCompletoRegras {
     public void testeNome() {
         System.setProperty("webdriver.edge.driver", "C:\\Users\\jeffe\\IdeaProjects\\CursoSelenium\\drivers\\msedgedriver.exe");
         WebDriver driver = new EdgeDriver();
-        driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
+        driver.get("file:///" + System.getProperty("user.dir") + "/src/test/resources/componentes.html");
         driver.findElement(By.id("elementosForm:nome"));
         driver.findElement(By.id("elementosForm:cadastrar")).click();
         Alert alert = driver.switchTo().alert();
@@ -25,7 +25,7 @@ public class TesteCompletoRegras {
     public void testeSobrenome() {
         System.setProperty("webdriver.edge.driver", "C:\\Users\\jeffe\\IdeaProjects\\CursoSelenium\\drivers\\msedgedriver.exe");
         WebDriver driver = new EdgeDriver();
-        driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
+        driver.get("file:///" + System.getProperty("user.dir") + "/src/test/resources/componentes.html");
         driver.findElement(By.id("elementosForm:nome")).sendKeys("Joao");
         driver.findElement(By.id("elementosForm:sobrenome"));
         driver.findElement(By.id("elementosForm:cadastrar")).click();
@@ -41,7 +41,7 @@ public class TesteCompletoRegras {
     public void testeSexo() {
         System.setProperty("webdriver.edge.driver", "C:\\Users\\jeffe\\IdeaProjects\\CursoSelenium\\drivers\\msedgedriver.exe");
         WebDriver driver = new EdgeDriver();
-        driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
+        driver.get("file:///" + System.getProperty("user.dir") + "/src/test/resources/componentes.html");
         driver.findElement(By.id("elementosForm:nome")).sendKeys("Joao");
         driver.findElement(By.id("elementosForm:sobrenome")).sendKeys("Pires");
         driver.findElement(By.id("elementosForm:cadastrar")).click();
@@ -54,7 +54,7 @@ public class TesteCompletoRegras {
     public void testeComida() {
         System.setProperty("webdriver.edge.driver", "C:\\Users\\jeffe\\IdeaProjects\\CursoSelenium\\drivers\\msedgedriver.exe");
         WebDriver driver = new EdgeDriver();
-        driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
+        driver.get("file:///" + System.getProperty("user.dir") + "/src/test/resources/componentes.html");
         driver.findElement(By.id("elementosForm:nome")).sendKeys("Joao");
         driver.findElement(By.id("elementosForm:sobrenome")).sendKeys("Pires");
         driver.findElement(By.id("elementosForm:sexo:0")).click();
@@ -71,7 +71,7 @@ public class TesteCompletoRegras {
     public void testeEsporte() {
         System.setProperty("webdriver.edge.driver", "C:\\Users\\jeffe\\IdeaProjects\\CursoSelenium\\drivers\\msedgedriver.exe");
         WebDriver driver = new EdgeDriver();
-        driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
+        driver.get("file:///" + System.getProperty("user.dir") + "/src/test/resources/componentes.html");
         driver.findElement(By.id("elementosForm:nome")).sendKeys("Joao");
         driver.findElement(By.id("elementosForm:sobrenome")).sendKeys("Pires");
         driver.findElement(By.id("elementosForm:sexo:0")).click();

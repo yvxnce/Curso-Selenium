@@ -12,7 +12,7 @@ public class TesteAlert {
 	public void deveInteragirComAlertSimples(){
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().setSize(new Dimension(1200, 765));
-		driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
+		driver.get("file:///" + System.getProperty("user.dir") + "/src/test/resources/componentes.html");
 		
 		driver.findElement(By.id("alert")).click();
 		Alert alert = driver.switchTo().alert();
@@ -27,7 +27,7 @@ public class TesteAlert {
 	public void deveInteragirComAlertConfirm(){
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().setSize(new Dimension(1200, 765));
-		driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
+		driver.get("file:///" + System.getProperty("user.dir") + "/src/test/resources/componentes.html");
 		
 		driver.findElement(By.id("confirm")).click();
 		Alert alerta = driver.switchTo().alert();
