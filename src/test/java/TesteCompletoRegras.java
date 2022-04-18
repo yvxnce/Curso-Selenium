@@ -27,7 +27,6 @@ public class TesteCompletoRegras {
         WebDriver driver = new EdgeDriver();
         driver.get("file:///" + System.getProperty("user.dir") + "/src/test/resources/componentes.html");
         driver.findElement(By.id("elementosForm:nome")).sendKeys("Joao");
-        driver.findElement(By.id("elementosForm:sobrenome"));
         driver.findElement(By.id("elementosForm:cadastrar")).click();
         Alert alert = driver.switchTo().alert();
         String msg = alert.getText();
