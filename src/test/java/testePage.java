@@ -22,11 +22,17 @@ public class testePage {
         @Test
         public void testeCadastroCompleto () {
             page.setNome("joao");
+            page.checharNome("joao");
             page.setSobrenome("pires");
+            page.checharSobrenome("pires");
             page.setSexoMasculino();
+            page.checharSexoM();
             page.setComidaCarne();
+            page.checharComidaCarne();
             page.setEscoloridade("Mestrado");
+            page.checharEscolaridade("Mestrado");
             page.setEsporte("Karate");
+            page.checharEsporte("Karate");
             page.setCadastrar();
     }
 }

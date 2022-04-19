@@ -16,44 +16,79 @@ public class PageObjetcs {
     }
 
     public void setSobrenome(String sobrenome) {
-    dsl.escrever("elementosForm:sobrenome", sobrenome);
+        dsl.escrever("elementosForm:sobrenome", sobrenome);
 
 
     }
 
-    public void setSexoMasculino(){
+    public void setSexoMasculino() {
         dsl.marcarHomem();
 
     }
 
-    public void setComidaCarne(){
+    public void setComidaCarne() {
         dsl.marcarcarne();
 
 
     }
 
-    public void setComidaVegetariano(){
+    public void setComidaVegetariano() {
         dsl.marcarvegan();
 
 
     }
 
-    public void setEscoloridade(String form){
+    public void setEscoloridade(String form) {
 
         dsl.escolaridade(form);
 
     }
 
-    public void setEsporte(String esporte){
+    public void setEsporte(String esporte) {
         dsl.marcaresporte(esporte);
 
 
     }
 
-    public void setCadastrar(){
+    public void setCadastrar() {
         dsl.cadastrar();
 
 
     }
 
+
+    public void checharNome(String nome) {
+        dsl.checarNome(nome);
+
+
+    }
+
+    public void checharSobrenome(String sobrenome) {
+        dsl.checarSobrenome(sobrenome);
+
+    }
+
+
+    public void checharSexoM() {
+        dsl.checharSexoH();
+
+
+    }
+
+    public void checharComidaCarne() {
+        dsl.checharComidaCarne();
+
+
+    }
+
+    public void checharEscolaridade(String escolaridade) {
+        dsl.checharEscolaridade(escolaridade);
+
+
+    }
+
+    public void checharEsporte(String esporte) {
+        dsl.checharEsporte(esporte);
+
+    }
 }

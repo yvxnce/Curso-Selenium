@@ -21,6 +21,7 @@ public class testeDSL {
     public void testesobrenome() {
 
         dsl.escrever("elementosForm:nome", "Joao");
+        dsl.checarNome("Joao");
         dsl.cadastrar();
         dsl.verificar("Sobrenome eh obrigatorio");
 
