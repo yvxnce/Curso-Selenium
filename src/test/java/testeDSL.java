@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
 public class testeDSL {
-    private WebDriver driver;
+    public WebDriver driver;
     private DSL dsl;
 
     @Before
@@ -38,6 +38,15 @@ public class testeDSL {
     }
 
     @Test
+    public void testevegan(){
+        dsl.escrever("elementosForm:nome","joao");
+        dsl.escrever("elementosForm:sobrenome","pires");
+        dsl.marcarHomem();
+        dsl.marcarcarnevegan();
+        dsl.cadastrar();
+        dsl.verificar("Tem certeza que voce eh vegetariano?");
+    }
+
 }
 
 

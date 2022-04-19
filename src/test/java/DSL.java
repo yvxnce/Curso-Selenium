@@ -28,4 +28,21 @@ public class DSL {
         Assert.assertEquals(texto, msg);
 
     }
+
+    public void marcarHomem(){
+        driver.findElement(By.id("elementosForm:sexo:0")).click();
+
+
+    }
+
+
+    public void marcarcarnevegan(){
+        driver.findElement(By.id("elementosForm:comidaFavorita:0")).click();
+        driver.findElement(By.id("elementosForm:comidaFavorita:3")).click();
+
+
+
+
+
+    }
 }
