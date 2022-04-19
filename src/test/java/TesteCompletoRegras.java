@@ -1,13 +1,14 @@
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.Select;
+
 
 public class TesteCompletoRegras {
 
@@ -19,6 +20,7 @@ public class TesteCompletoRegras {
         System.setProperty("webdriver.edge.driver", "C:\\Users\\jeffe\\IdeaProjects\\CursoSelenium\\drivers\\msedgedriver.exe");
         driver = new EdgeDriver();
         driver.get("file:///" + System.getProperty("user.dir") + "/src/test/resources/componentes.html");
+        driver.manage().window().maximize();
     }
 
     @Test
@@ -32,6 +34,7 @@ public class TesteCompletoRegras {
 
     @Test
     public void testeSobrenome() {
+
         driver.findElement(By.id("elementosForm:nome")).sendKeys("Joao");
         driver.findElement(By.id("elementosForm:cadastrar")).click();
         Alert alert = driver.switchTo().alert();
@@ -44,6 +47,7 @@ public class TesteCompletoRegras {
 
     @Test
     public void testeSexo() {
+
         driver.findElement(By.id("elementosForm:nome")).sendKeys("Joao");
         driver.findElement(By.id("elementosForm:sobrenome")).sendKeys("Pires");
         driver.findElement(By.id("elementosForm:cadastrar")).click();
