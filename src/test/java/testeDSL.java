@@ -47,6 +47,19 @@ public class testeDSL {
         dsl.verificar("Tem certeza que voce eh vegetariano?");
     }
 
+
+    @Test
+    public void testeesporte(){
+        dsl.escrever("elementosForm:nome","joao");
+        dsl.escrever("elementosForm:sobrenome","pires");
+        dsl.marcarHomem();
+        dsl.marcaresporte("Corrida");
+        dsl.marcaresporte("O que eh esporte?");
+        dsl.cadastrar();
+        dsl.verificar("Voce faz esporte ou nao?");
+    }
+
+
 }
 
 
