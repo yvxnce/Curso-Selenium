@@ -1,5 +1,6 @@
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
@@ -60,6 +61,11 @@ public class testeDSL {
         dsl.verificar("Voce faz esporte ou nao?");
     }
 
+    @Test
+    public void testJavaSc() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("alert('Testando js via selenium')");
+    }
 
 }
 

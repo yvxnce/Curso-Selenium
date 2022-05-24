@@ -1,3 +1,4 @@
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.Assert;
 import org.openqa.selenium.Alert;
@@ -6,29 +7,44 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
 public class testeDismiss {
+public WebDriver driver;
 
+    @Before
+    public void Iniciliza(){
+        System.setProperty("webdriver.edge.driver", "C:\\Users\\jeffe\\IdeaProjects\\CursoSelenium\\drivers\\msedgedriver.exe");
+        driver = new EdgeDriver();
+        driver.get("file:///" + System.getProperty("user.dir") + "/src/test/resources/componentes.html");
+        driver.manage().window().maximize();
+
+    }
 
     @Test
     public void testeDiss() {
-        System.setProperty("webdriver.edge.driver", "C:\\Users\\jeffe\\IdeaProjects\\CursoSelenium\\drivers\\msedgedriver.exe");
-        WebDriver driver = new EdgeDriver();
-        driver.get("file:///" + System.getProperty("user.dir") + "/src/test/resources/componentes.html");
+
         driver.findElement(By.id("confirm")).click();
         Alert alerta = driver.switchTo().alert();
         alerta.dismiss();
         String texto = alerta.getText();
-        System.out.println(texto);
-        Assert.assertEquals("Negado", alerta.getText());
+        Assert.assertEquals("Negado", texto);
+
+    }
+
+    @Test
+    public void testeAcc() {
+
+        driver.findElement(By.id("confirm")).click();
+        Alert alerta = driver.switchTo().alert();
+        alerta.accept();
+        String texto = alerta.getText();
+        Assert.assertEquals("Confirmado", texto);
+
 
     }
 
 
-
     @Test
         public void testPrompt (){
-        System.setProperty("webdriver.edge.driver", "C:\\Users\\jeffe\\IdeaProjects\\CursoSelenium\\drivers\\msedgedriver.exe");
-        WebDriver driver = new EdgeDriver();
-        driver.get("file:///" + System.getProperty("user.dir") + "/src/test/resources/componentes.html");
+
         driver.findElement(By.id("prompt")).click();
         Alert alerta = driver.switchTo().alert();
         Assert.assertEquals("Digite um numero", alerta.getText());
