@@ -10,7 +10,7 @@ public class TesteIframeEJanelas {
 
     @Test
     public void testeClickFrame() {
-        System.setProperty("webdriver.edge.driver", "C:\\Users\\jeffe\\IdeaProjects\\CursoSelenium\\drivers\\msedgedriver.exe");
+        System.setProperty("webdriver.edge.driver", "C:\\Users\\joaog\\IdeaProjects\\CursoSelenium\\drivers\\msedgedriver.exe");
         WebDriver driver = new EdgeDriver();
         driver.get("file:///" + System.getProperty("user.dir") + "/src/test/resources/componentes.html");
 
@@ -26,7 +26,7 @@ public class TesteIframeEJanelas {
     }
         @Test
         public void DeveInteragirJanelas(){
-            System.setProperty("webdriver.edge.driver", "C:\\Users\\jeffe\\IdeaProjects\\CursoSelenium\\drivers\\msedgedriver.exe");
+            System.setProperty("webdriver.edge.driver", "C:\\Users\\joaog\\IdeaProjects\\CursoSelenium\\drivers\\msedgedriver.exe");
             WebDriver driver = new EdgeDriver();
             driver.get("file:///" + System.getProperty("user.dir") + "/src/test/resources/componentes.html");
 
@@ -40,7 +40,7 @@ public class TesteIframeEJanelas {
 
     @Test
     public void DeveInteragirJanelasSemTitulo() {
-        System.setProperty("webdriver.edge.driver", "C:\\Users\\jeffe\\IdeaProjects\\CursoSelenium\\drivers\\msedgedriver.exe");
+        System.setProperty("webdriver.edge.driver", "C:\\Users\\joaog\\IdeaProjects\\CursoSelenium\\drivers\\msedgedriver.exe");
         WebDriver driver = new EdgeDriver();
         driver.get("file:///" + System.getProperty("user.dir") + "/src/test/resources/componentes.html");
 

@@ -10,7 +10,7 @@ public class TesteCadrastroCompleto {
 
     @Test
     public void TestFull (){
-        System.setProperty("webdriver.edge.driver", "C:\\Users\\jeffe\\IdeaProjects\\CursoSelenium\\drivers\\msedgedriver.exe");
+        System.setProperty("webdriver.edge.driver", "C:\\Users\\joaog\\IdeaProjects\\CursoSelenium\\drivers\\msedgedriver.exe");
         WebDriver driver = new EdgeDriver();
         driver.get("file:///" + System.getProperty("user.dir") + "/src/test/resources/componentes.html");
         driver.findElement(By.id("elementosForm:nome")).sendKeys("Joao Gabriel");
