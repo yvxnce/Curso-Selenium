@@ -1,12 +1,10 @@
 import java.util.List;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
@@ -14,6 +12,15 @@ import org.openqa.selenium.support.ui.Select;
 public class TesteCampoTreinamento {
 
 	private DSL dsl;
+	private WebDriver driver;
+	@Before
+	public void inicializa() {
+		System.setProperty("webdriver.edge.driver", "C:\\Users\\jeffe\\IdeaProjects\\CursoSelenium\\drivers\\msedgedriver.exe");
+		driver = new EdgeDriver();
+		driver.get("file:///" + System.getProperty("user.dir") + "/src/test/resources/componentes.html");
+		driver.manage().window().maximize();
+		dsl = new DSL(driver);
+	}
 
 	@Test
 	public void testeTextField(){
@@ -60,12 +67,10 @@ public class TesteCampoTreinamento {
 	
 	@Test
 	public void deveIntegarirComCombo(){
-		WebDriver driver = new FirefoxDriver();
-		driver.manage().window().setSize(new Dimension(1200, 765));
-		driver.get("file:///" + System.getProperty("user.dir") + "/src/test/resources/componentes.html");
+
 		WebElement element = driver.findElement(By.id("elementosForm:escolaridade"));
 		Select combo = new Select(element);
-		combo.selectByVisibleText("2o grau completo");
+		combo.selectByVisibleText("Corrida");
 		
 		Assert.assertEquals("2o grau completo", combo.getFirstSelectedOption().getText());
 		driver.quit();
@@ -98,19 +103,16 @@ public class TesteCampoTreinamento {
 		driver.get("file:///" + System.getProperty("user.dir") + "/src/test/resources/componentes.html");
 		WebElement element = driver.findElement(By.id("elementosForm:esportes"));
 		Select combo = new Select(element);
-		combo.selectByVisibleText("Natacao");
-		combo.selectByVisibleText("Corrida");
-		combo.selectByVisibleText("O que eh esporte?");
-		
+		combo.selectByVisibleText("");
+		combo.selectByVisibleText("");
+		combo.selectByVisibleText("");
 		List<WebElement> allSelectedOptions = combo.getAllSelectedOptions();
 		Assert.assertEquals(3, allSelectedOptions.size());
-		
 		combo.deselectByVisibleText("Corrida");
 		allSelectedOptions = combo.getAllSelectedOptions();
 		Assert.assertEquals(2, allSelectedOptions.size());
 		driver.quit();
 	}
-	
 	@Test
 	public void deveinteragirComBotoes(){
 		WebDriver driver = new FirefoxDriver();
@@ -153,5 +155,12 @@ public class TesteCampoTreinamento {
 	}
 	
 }
+
+
+
+
+
+
+
 
 
