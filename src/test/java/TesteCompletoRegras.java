@@ -17,7 +17,7 @@ public class TesteCompletoRegras {
 
     @Before
     public void inicializa(){
-        System.setProperty("webdriver.edge.driver", "C:\\Users\\jeffe\\IdeaProjects\\CursoSelenium\\drivers\\msedgedriver.exe");
+        System.setProperty("webdriver.edge.driver", "C:\\Users\\joaog\\IdeaProjects\\CursoSelenium\\drivers\\msedgedriver.exe");
         driver = new EdgeDriver();
         driver.get("file:///" + System.getProperty("user.dir") + "/src/test/resources/componentes.html");
         driver.manage().window().maximize();
